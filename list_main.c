@@ -11,6 +11,13 @@ list(string);
 
 list(float);
 
+#define MainFunc main
+
+#define execution() do\
+{\
+    MainFunc\
+} while (0);
+
 
 PRIVATE void int_operations(void)
 {
@@ -109,7 +116,7 @@ PRIVATE void string_operations(void)
 
 
 
-void main(void)
+void MainFunc(void)
 {
     int_operations();
 
