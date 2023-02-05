@@ -12,3 +12,6 @@
 #
 #use gcc:
 #   gcc -Wall -w -o main.exe list_main.c linked_list.c linked_list.h
+#   
+#   execute:
+#       ./main.exe
