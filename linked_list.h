@@ -150,18 +150,16 @@ typedef char* string;
 #define __append__(T)\
     void T##_append(T##_list* L, T data){\
         assert(L);\
+        T##_node* node = malloc(sizeof *node);\
+        node->data = data;\
         if(L->size == 0){\
             /*push(L, data)*/\
             L->size += 1;\
-            T##_node* node = malloc(sizeof *node);\
-            node->data = data;\
             node->next = L->head;\
             L->head = node;\
         }\
         /*loop node*/\
         else{\
-            T##_node* node = malloc(sizeof *node);\
-            node->data = data;\
             node->next = NULL;\
             T##_node* temp = L->head;\
             while(temp->next != NULL){\
