@@ -219,10 +219,11 @@ typedef char* string;
             free(curr);\
         }\
         else{\
-            while(index != 0){\
+            size_t count = 0;\
+            while(count < index){\
                 prev = curr;\
                 curr = curr->next;\
-                index -= 1;\
+                count += 1;\
             }\
             prev->next = curr->next;\
             free(curr);\
