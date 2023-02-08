@@ -1,3 +1,6 @@
+#ifndef LINKED_LIST_H
+#define LINKED_LIST_H
+
 #include <stddef.h>
 #include <stdlib.h>
 #include <string.h>
@@ -299,3 +302,5 @@ typedef char* string;
             }\
         }\
     }
+
+#endif
